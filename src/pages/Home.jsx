@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Importa o hook useNavigate do React Router
+import fundoWow from "../assets/images/fundo_wow.png"; // Importe a imagem
+import timeIsMoney from "../assets/images/time-is-money.png"; // Importe a imagem
+import corridaOuro from "../assets/images/corrida_ouro.png"; // Importe a imagem
+import goblinGordo from "../assets/images/goblin-gordo.png"; // Importe a imagem
 
 function Home() {
   const [email, setEmail] = useState("");
@@ -15,7 +19,7 @@ function Home() {
     <div
       className="relative w-full bg-cover bg-center"
       style={{
-        backgroundImage: 'url("src/assets/images/fundo_wow.png")',
+        backgroundImage: `url(${fundoWow})`, // Utilize a imagem importada
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -63,7 +67,7 @@ function Home() {
         </div>
         <div className="lg:w-1/3 lg:mr-16 mt-6 lg:mt-0">
           <img
-            src="src/assets/images/time-is-money.png"
+            src={timeIsMoney} // Utilize a imagem importada
             alt="Diminuição do Tempo de Farm"
             className="h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
           />
@@ -76,7 +80,7 @@ function Home() {
           <h2 className="text-6xl font-semibold mb-4 text-center">Preços Acessíveis</h2>
           <div className="flex justify-center mb-6">
             <img
-              src="src/assets/images/corrida_ouro.png"
+              src={corridaOuro} // Utilize a imagem importada
               alt="Segurança na Compra"
               className="max-w-full lg:max-w-4xl rounded-lg transition-transform transform hover:scale-110"
             />
@@ -93,7 +97,7 @@ function Home() {
       <div className="flex flex-col lg:flex-row items-center justify-center py-12 bg-gray-900 text-white opacity-90 transition-opacity duration-1000 ease-in-out">
         <div className="lg:w-1/2">
           <img
-            src="src/assets/images/goblin-gordo.png"
+            src={goblinGordo} // Utilize a imagem importada
             alt="Segurança na Compra"
             className="h-auto rounded-lg shadow-lg transition-transform transform hover:scale-110"
           />
